@@ -1,6 +1,569 @@
-.bude {
-  padding-left: 10px;
+@font-face {
+  font-family: NewsCycle;
+  src: url(fonty/NewsCycle-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: NewsCycle;
+  src: url(fonty/NewsCycle-Regular.ttf);
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  background-image: url(kolicky.png);
+  background-position: right -1.5rem;
+  background-size: 45%;
+  margin: 0;
+  inset-inline-end: 1rem;
+  display: block;
+  background-color: #f7f7f7;
+  font-family: "NewsCycle", sans-serif;
+  font-weight: 400;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.slogan {
+  text-align: center;
+  color: #0c0c0c;
+  margin-top: -100pt;
+  font-size: 35pt;
+  font-weight: 200;
+  letter-spacing: 0.25rem;
+  line-height: 0.5;
+}
+
+.logo img {
+  display: block;
+  width: 250pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 110pt;
+  margin-bottom: 30pt;
+  position: center center;
+}
+
+.kontakt-button {
+  inset-inline-end: 2rem;
+  display: block;
+  position: absolute;
+  margin-top: -80pt;
+  background-color: #3891a6;
+  color: #f7f7f7;
+  border: none;
+  text-decoration: none;
+  border-radius: 15pt;
+  font-size: 18pt;
+  font-family: NewsCycle;
+  letter-spacing: 0.25rem;
+  padding: 14pt 28pt 14pt 28pt;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  cursor: pointer;
+}
+
+.arrow {
+  border: none;
+  background: none;
+  display: block;
+  width: 250pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80pt;
+  margin-bottom: 30pt;
+  position: center center;
+  animation: animace-arrow infinite 3s;
+}
+
+.reference {
+  margin-top: 11rem;
+  background-color: #212631;
+  height: 700pt;
+}
+.nadpis-reference {
+  color: #f7f7f7;
+  padding-top: 2rem;
+  margin-left: 60pt;
+  letter-spacing: 0.25rem;
   font-size: 30pt;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 200;
+}
+.poptavka {
+  background-color: #d9bfc0;
+  color: #0c0c0c;
+  border: none;
+  font-family: NewsCycle;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  font-size: 16pt;
+  margin-top: 50pt;
+  margin-left: 31rem;
+  margin-right: 425pt;
+  display: block;
+  text-align: center;
+  border-radius: 20pt;
+  padding: 12pt 22pt 12pt 22pt;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  cursor: pointer;
+}
+.nadpis-o-mne {
+  color: #0c0c0c;
+  padding-top: 2rem;
+  margin-left: 60pt;
+  letter-spacing: 0.25rem;
+  font-size: 30pt;
+  font-weight: 200;
+}
+
+.o-mne {
+  height: 700pt;
+  background-color: #f7f7f7;
+  background-image: url(kolicky-bok.png);
+  background-position: 25rem;
+  background-size: 55%;
+  margin: 0;
+  background-position-x: 15rem;
+  background-position-y: 24.5rem;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.ja {
+  display: block;
+  width: 250pt;
+  margin-left: 60pt;
+  margin-right: auto;
+  margin-top: 30pt;
+  margin-bottom: 30pt;
+  border-radius: 3pt;
+}
+.cary {
+  display: block;
+  width: 67%;
+  margin-left: 150pt;
+  margin-right: auto;
+  margin-top: -365pt;
+  margin-bottom: 30pt;
+}
+.popis {
+  font-size: 16px;
+  font-family: NewsCycle;
+  letter-spacing: 0.2rem;
+  line-height: 0.4;
+  margin-left: 370pt;
+  margin-top: -480pt;
+}
+
+.button-zivotopis {
+  position: absolute;
+  background-color: #d9bfc0;
+  text-decoration: none;
+  color: #0c0c0c;
+  border: none;
+  font-family: NewsCycle;
+  letter-spacing: 0.2rem;
+  font-size: 18pt;
+  margin-top: 110pt;
+  margin-left: 9rem;
+  margin-right: auto;
+  display: block;
+  border-radius: 15pt;
+  padding: 12pt 22pt 12pt 22pt;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  cursor: pointer;
+}
+
+.button-instagram {
+  position: absolute;
+  background: none;
+  width: 45pt;
+  margin-left: 11rem;
+  margin-right: auto;
+  margin-top: -14rem;
+  display: block;
+  cursor: pointer;
+}
+
+.button-instagram img {
+  width: 100%;
+  height: auto;
+}
+
+.button-facebook {
+  position: absolute;
+  background: none;
+  width: 45pt;
+  margin-left: 15rem;
+  margin-right: auto;
+  margin-top: -14rem;
+  display: block;
+  cursor: pointer;
+}
+.button-facebook img {
+  width: 100%;
+  height: auto;
+}
+
+.nadpis-proces {
+  color: #0c0c0c;
+  letter-spacing: 0.25rem;
+  font-size: 30pt;
+  font-weight: 200;
+}
+.proces {
+  height: 400pt;
+  margin-left: 60pt;
+  counter-reset: odrazky;
+}
+.popis-proces {
+  margin-right: 75px;
+  border-style: solid;
+  border-color: #0c0c0c;
+  color: #0c0c0c;
+  background-color: #ebeaea;
+  height: 4rem;
+  border-radius: 15px;
+  letter-spacing: 0.1rem;
+  font-size: 16px;
+  padding-left: 4rem;
+  padding-top: 5pt;
+}
+
+.sluzby {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 10rem;
+  background-color: #d9bfc0;
+}
+
+.nadpis-hlavni {
+  color: #0c0c0c;
+  padding-top: 0;
+  margin-left: 60pt;
+  letter-spacing: 0.25rem;
+  font-size: 30pt;
+  font-weight: 200;
+}
+
+.nadpis-sluzby {
+  color: #0c0c0c;
+  margin-left: 60pt;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+}
+.popis-sluzby {
+  color: #0c0c0c;
+  margin-left: 60pt;
+  font-size: 16px;
+  margin-top: 0;
+  font-weight: 200;
+  letter-spacing: 0.25rem;
+  margin-bottom: 60pt;
+}
+
+.nadpis-wireframy {
+  color: #0c0c0c;
+  margin-left: 60pt;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+}
+
+.ceny-sluzeb {
+  font-size: 16px;
+  color: #0c0c0c;
+  border-left: 1px solid #0c0c0c;
+  letter-spacing: 0.2rem;
+  padding: 60pt 2rem;
+}
+
+body .boxiky {
+  width: 100%;
+}
+body .boxiky .row {
+  display: flex;
+  gap: 1rem;
+  margin: 0 60pt;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  margin: 10px 0;
+  transition: ease all 2.3s;
+  perspective: 1200px;
+}
+
+.boxiky .boxik {
+  width: 33%;
+}
+
+.card:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg);
+}
+.card:hover .cover:before {
+  transform: translateZ(30px);
+}
+.card:hover .cover:after {
+  background-color: black;
+}
+.card:hover .cover h1 {
+  transform: translateZ(100px);
+}
+.card:hover .cover .price {
+  transform: translateZ(60px);
+}
+.card:hover .cover a {
+  transform: translateZ(-60px) rotatey(-180deg);
+}
+.card .cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.card .cover:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all 2.3s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+.card .cover:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(0, 0, 0, 0.1);
+}
+.card .cover.item-a {
+  background-image: url(kosmetika.png);
+}
+.card .cover.item-b {
+  background-image: url(hospoda.png);
+}
+.card .cover.item-c {
+  background-image: url(fyziocore.png);
+}
+.card .cover h1 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 55px;
+  left: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 3;
+  font-size: 3em;
+  transform: translateZ(0px);
+}
+.card .cover .price {
+  font-weight: 200;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 4;
+  font-size: 2em;
+  transform: translateZ(0px);
+}
+.card .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  transform: translateZ(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+}
+
+.card .item-a .card-back {
+  background-image: url("kosmetika-back.png");
+}
+
+.card .item-b .card-back {
+  background-image: url("hospoda-back.png");
+}
+
+.card .item-c .card-back {
+  background-image: url("fyziocore-back.png");
+}
+
+.card .card-back a {
+  transform-style: preserve-3d;
+  transition: ease transform 2.3s, ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  background: rgba(173, 173, 173, 0.4);
+  border: 1px solid white;
+  font-weight: 200;
+  font-size: 1.3em;
+  color: white;
+  padding: 14px 32px;
+  letter-spacing: 0.25rem;
+  outline: none;
+  text-decoration: none;
+}
+.card .card-back a:hover {
+  background-color: white;
+  color: #0b0f08;
+  letter-spacing: 0.25rem;
+}
+
+.kontakt {
+  background-color: #d9d9d9;
+  position: relative;
+}
+
+.kontakt h2 {
+  margin: 0;
+  color: #0c0c0c;
+  padding-top: 2rem;
+  margin-left: 60pt;
+  letter-spacing: 0.25rem;
+  font-size: 30pt;
+  font-weight: 200;
+}
+
+.email {
+  display: flex;
+  color: #0c0c0c;
+  margin-left: 60pt;
+  margin-top: 3rem;
+  letter-spacing: 0.15rem;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.gmail {
+  padding-right: 1rem;
+  padding-top: 0rem;
+}
+
+.gmail img {
+  width: 100%;
+  height: auto;
+}
+
+.phone {
+  padding-left: 5rem;
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+}
+
+.spojme-se {
+  display: block;
+  color: #0c0c0c;
+  font-size: 20pt;
+  margin-top: 8rem;
+  margin-left: 60pt;
+  letter-spacing: 0.25rem;
+}
+
+.kontakt-insta {
+  margin-top: 1.5rem;
+  margin-left: 140pt;
+}
+.kontakt-insta img {
+  width: 100%;
+  height: auto;
+}
+
+.kontakt-linkedin {
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
+.kontakt-linkedin img {
+  width: 100%;
+  height: auto;
+}
+
+.kontakt-whatsapp {
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
+.kontakt-linkedin img {
+  width: 100%;
+  height: auto;
+}
+
+.kontakt-facebook {
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
+.kontakt-facebook img {
+  width: 100%;
+  height: auto;
+}
+
+.fotka-kontakt {
+  position: absolute;
+  bottom: 0;
+  height: 510px;
+  right: 0;
+}
+.fotka-kontakt img {
+  font-weight: 100%;
+}
+
+.vnitrek-kontaktu {
+  position: relative;
+  height: 30vh;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.popis-proces {
+  margin: 1rem 60pt 1rem 0;
+  position: relative;
+}
+
+.popis-proces p {
+  margin: 0;
+}
+
+.popis-proces::before {
+  counter-increment: odrazky;
+  content: counter(odrazky) ".";
+  position: absolute;
+  font-size: 30px;
+  left: 20px;
+  top: 10px;
 }

@@ -1,0 +1,51 @@
+@font-face {
+  font-family: NewsCycle;
+  src: url(fonty/NewsCycle-Bold.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: NewsCycle;
+  src: url(fonty/NewsCycle-Regular.ttf);
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(zivotopis.png);
+  background-size: 100%;
+  margin: 0;
+  inset-inline-end: 1rem;
+  display: block;
+  background-color: #f7f7f7;
+  font-family: NewsCycle;
+  background-repeat: no-repeat;
+  height: 2000px;
+}
+
+.close img {
+  width: 100%;
+  height: auto;
+}
+.close {
+  inset-inline-start: 2rem;
+  display: block;
+  position: absolute;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.zpet {
+  display: block;
+  position: absolute;
+  margin-top: 2.8rem;
+  font-size: 16px;
+  color: #1e1e1e;
+  margin-left: 4.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
